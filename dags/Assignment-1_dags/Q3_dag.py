@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Task to set the variable
 def set_variable():
-    Variable.set("My_name", "Hello all, my name is Bhanu Prasad!")
+    Variable.set("My_name", "Hello all, my name is Raju Kumar!")
     print("Variable 'My_name' has been set.")
 
 # Task to read the variable

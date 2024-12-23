@@ -43,19 +43,19 @@ with DAG(
     fetch_Aus_data = PythonOperator(
         task_id='fetch_aus_data',
         python_callable=fetch_and_write_to_csv,
-        op_args=['Australia', '/Users/bhanuprasadgantela/airflow_snowflake/output/usa_output.csv','data/retail_sales/aus_output.csv'],
+        op_args=['Australia', '/Users/rajukumar/airflow_snowflake/output/usa_output.csv','data/retail_sales/aus_output.csv'],
     )
 
     fetch_Belgium_data = PythonOperator(
         task_id='fetch_belgium_data',
         python_callable=fetch_and_write_to_csv,
-        op_args=['Belgium', '/Users/bhanuprasadgantela/airflow_snowflake/output/india_output.csv','data/retail_sales/belgium_output.csv'],
+        op_args=['Belgium', '/Users/rajukumar/airflow_snowflake/output/india_output.csv','data/retail_sales/belgium_output.csv'],
     )
 
     fetch_Brazil_data = PythonOperator(
         task_id='fetch_brazil_data',
         python_callable=fetch_and_write_to_csv,
-        op_args=['Brazil', '/Users/bhanuprasadgantela/airflow_snowflake/output/canada_output.csv','data/retail_sales/brazil_output.csv'],
+        op_args=['Brazil', '/Users/rajukumar/airflow_snowflake/output/canada_output.csv','data/retail_sales/brazil_output.csv'],
     )
 
     [fetch_Brazil_data,fetch_Belgium_data,fetch_Aus_data]

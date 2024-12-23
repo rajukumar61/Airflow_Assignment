@@ -6,7 +6,7 @@ from airflow.utils.email import send_email
 
 def send_dag2_notification(status):
     send_email(
-        to='your-email@example.com',
+        to='rajukumar.sde@gmail.com',
         subject=f"DAG2 Status: {status}",
         html_content=f"The status of DAG2 is: {status}. Please check the logs for more details."
     )
@@ -20,7 +20,7 @@ with DAG(
         default_args={
             'owner': 'airflow',
             'email_on_failure': True,
-            'email': ['your-email@example.com'],
+            'email': ['rajukumar.sde@gmail.com'],
         },
 ) as dag2:
 

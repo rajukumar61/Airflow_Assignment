@@ -12,7 +12,7 @@ dag = DAG(
         'retries': 1,
         'email_on_failure': True,
         'email_on_retry': True,
-        'email': ['bhanuprasadgantela14@gmail.com'],
+        'email': ['rajukumar.sde@gmail.com'],
     },
     description='DAG with email notifications on failure or retries',
     schedule_interval='@daily',
@@ -39,7 +39,7 @@ fail_task_operator = PythonOperator(
 def failure_callback(context):
     try:
         send_email(
-            to='deadpool.arjit1209@gmail.com',  # Corrected email format
+            to='rajukumar12052002@gmail.com',  # Corrected email format
             subject=f"Airflow Task Failed: {context['task_instance'].task_id}",
             html_content=f"Task {context['task_instance'].task_id} failed with error: {context['exception']}"
         )
